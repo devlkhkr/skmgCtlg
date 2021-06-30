@@ -1,0 +1,89 @@
+// s : 레이어 팝업
+.wrapper_popup_layer
+    .layer_mask(onclick="layerClose(this)") <!--공통 레이어 마스크-->
+    // s : 상품 레이어
+    .btn_layer_prev(onclick="doSlide(-100)")
+    .btn_layer_next(onclick="doSlide(100)")
+    .popup_layer_contents
+        .btn_layer_close(onclick="layerClose(this.parentNode)")
+        .slide_handler
+            .layer_page
+                .wrapper_compare_table 
+                    table 
+                        caption 정수기 비교하기
+                        colgroup
+                            col(width="12%")
+                            col(width="*")
+                            col(width="*")
+                            col(width="*")
+                        tbody
+                            tr
+                                th(rowspan="2") 제품
+                                td
+                                    .prd_title
+                                        .title_s SK매직 스스로 직수 정수기
+                                        .title_m WPU-A1100C<span>(V1. USP)</span>
+                                td
+                                    .prd_title
+                                        .title_s SK매직 스스로 직수 정수기
+                                        .title_m WPU-A1100C
+                                td
+                                    .prd_title
+                                        .title_s SK매직 스스로 직수 정수기
+                                        .title_m WPU-A1100C                         
+                            tr.prd_img
+                                td
+                                    img(src="../images/samples/prd_sample_01.png")
+                                td
+                                    img(src="../images/samples/prd_sample_01.png")
+                                td
+                                    img(src="../images/samples/prd_sample_01.png")
+                            tr.rentalPrice
+                                th 렌탈료
+                                td 27,900
+                                td 32,900
+                                td 42,900
+                            tr 
+                                th 정수방식
+                                td 냉수/온수/정수
+                                td 냉수/온수/정수
+                                td 냉수/온수/정수
+                            tr 
+                                th 주요기능
+                                td
+                                    ul 
+                                        li 듀얼안심케어
+                                        li Auto클린배수
+                                        li 메모리 출수 2개
+                                        li 안심출수라이팅
+                                        li 3단계온수온도 조절
+                                        li err등급 1등급
+                                td
+                                    ul 
+                                        li 듀얼안심케어
+                                        li Auto클린배수
+                                        li 메모리 출수 2개
+                                        li 안심출수라이팅
+                                        li 3단계온수온도 조절
+                                        li err등급 1등급
+                                td
+                                    ul 
+                                        li 듀얼안심케어
+                                        li Auto클린배수
+                                        li 메모리 출수 2개
+                                        li 안심출수라이팅
+                                        li 3단계온수온도 조절
+                                        li err등급 1등급                                                                                
+                                
+            .layer_page 2
+            .layer_page 3
+            .layer_page 4
+                            
+    // e : 상품 레이어
+    // s : 검색 레이어
+    .popup_search_bar
+        .btn_close_search(onclick="layerClose(this.parentNode)")
+        input(type="text" placeholder="검색어를 입력해 주세요.").input_search
+        .btn_do_search                
+    // e : 검색 레이어
+// e : 레이어 팝업

@@ -1,0 +1,960 @@
+@charset "UTF-8";
+@import "var";
+@import url(./reset.css);
+/* s : 폰트 선언 */
+@font-face {
+    font-family: 'notoSansLight';
+    font-style: normal;
+    src: url("../font/NotoSansKR-Light.woff") format("woff"), url("../font/NotoSansKR-Light.eot");
+}
+
+@font-face {
+    font-family: 'notoSansRegular';
+    font-style: normal;
+    src: url("../font/NotoSansKR-Regular.woff") format("woff"), url("../font/NotoSansKR-Regular.eot");
+}
+
+@font-face {
+    font-family: 'notoSansMedium';
+    font-style: normal;
+    src: url("../font/NotoSansKR-Medium.woff") format("woff"), url("../font/NotoSansKR-Medium.eot");
+}
+
+@font-face {
+    font-family: 'notoSansBold';
+    font-style: normal;
+    src: url("../font/NotoSansKR-Bold.woff") format("woff"), url("../font/NotoSansKR-Bold.eot");
+}
+
+@font-face {
+    font-family: 'robotoLight';
+    font-style: normal;
+    src: url("../font/Roboto-Light.woff") format("woff"), url("../font/Roboto-Light.eot");
+}
+
+@font-face {
+    font-family: 'robotoRegular';
+    font-style: normal;
+    src: url("../font/Roboto-Regular.woff") format("woff"), url("../font/Roboto-Regular.eot");
+}
+
+@font-face {
+    font-family: 'robotoMedium';
+    font-style: normal;
+    src: url("../font/Roboto-Medium.woff") format("woff"), url("../font/Roboto-Medium.eot");
+}
+
+@font-face {
+    font-family: 'robotoBold';
+    font-style: normal;
+    src: url("../font/Roboto-Bold.woff") format("woff"), url("../font/Roboto-Bold.eot");
+}
+/* s : 폰트 선언 */
+
+/* s : svg icon 공통 */
+@function check($color){
+    $color: '%23'+$color;
+    $icon: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18"><path id="체크" d="M11.036,19.839,5.309,14.2,3.4,16.078,11.036,23.6,27.4,7.481,25.491,5.6Z" transform="translate(-3.4 -5.6)" fill="#{$color}"/></svg>';
+    @return url($icon);
+}
+@function close($color){
+    $color: '%23'+$color;
+    $icon: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="23.414" height="23.414" viewBox="0 0 23.414 23.414"><g id="닫기" transform="translate(-121.793 -10538.293)"><g id="그룹_119" data-name="그룹 119" transform="translate(37 -81)"><g id="그룹_118" data-name="그룹 118"><g id="그룹_116" data-name="그룹 116"><g id="그룹_115" data-name="그룹 115" transform="translate(453 -20.5)"><line id="선_1" data-name="선 1" x2="22" y2="22" transform="translate(-367.5 10640.5)" fill="none" stroke="#{$color}" stroke-width="2"/><line id="선_2" data-name="선 2" x2="22" y2="22" transform="translate(-345.5 10640.5) rotate(90)" fill="none" stroke="#{$color}" stroke-width="2"/></g></g></g></g></g></svg>';
+    @return url($icon);
+}
+@function heart($color){
+    $color: '%23'+$color;
+    $icon: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path id="즐겨찾기" d="M16.5,3A6.037,6.037,0,0,0,12,5.05,6.037,6.037,0,0,0,7.5,3,5.4,5.4,0,0,0,2,8.4c0,3.708,3.4,6.729,8.55,11.32L12,21l1.45-1.295C18.6,15.124,22,12.1,22,8.4A5.4,5.4,0,0,0,16.5,3ZM12.1,18.253l-.1.1-.1-.1C7.14,14.026,4,11.23,4,8.4A3.386,3.386,0,0,1,7.5,4.962a3.912,3.912,0,0,1,3.57,2.315h1.87A3.886,3.886,0,0,1,16.5,4.962,3.386,3.386,0,0,1,20,8.4C20,11.23,16.86,14.026,12.1,18.253Z" transform="translate(-2 -3)" fill="#{$color}"/></svg>';
+    @return url($icon);
+}
+@function search($color){
+    $color: '%23'+$color;
+    $icon: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><g id="검색" transform="translate(-153 -10621)"><path id="패스_35" data-name="패스 35" d="M21.582,19.352H20.408l-.416-.4a9.677,9.677,0,1,0-1.041,1.041l.4.416v1.174L26.785,29,29,26.785Zm-8.919,0a6.69,6.69,0,1,1,6.69-6.69A6.681,6.681,0,0,1,12.663,19.352Z" transform="translate(150 10618)" fill="#{$color}"/></g></svg>';
+    @return url($icon);
+}
+@function arrow($color){
+    $color: '%23'+$color;
+    $icon: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21.74" height="45.345" viewBox="0 0 21.74 45.345"><path id="화살표" d="M0,0,18.75,20.625,20,22,0,44" transform="translate(21 44.673) rotate(180)" fill="none" stroke="#{$color}" stroke-linejoin="round" stroke-width="2"/></svg>';
+    @return url($icon);
+}
+/* e : svg icon 공통 */
+
+/* s : 레이아웃 */
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    overflow: hidden;
+    letter-spacing: calc(-1 * (0.5rem / 13.34));
+}
+html{
+    font-size: 1vw;
+    font-family: $robotoM, $notoM;
+    color: #222;
+}
+/* s : fullScreen`*/
+#navTrigger{
+    display: inline-block;
+    position: fixed;
+    bottom: $px20;
+    left: $px20;
+    appearance: none;
+    z-index: 998;
+    width: $px40;
+    height: $px40;
+    background: #fff;
+    border: $px2 solid #666;
+    border-radius: 100%;
+    transition-duration: .3s;
+    &::before{
+        position: absolute;
+        content: "<";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: #666;
+    }
+    &:checked{
+        transform: rotate(180deg);
+    }
+}
+body.navoff{
+    .ctlg_top_header{
+        top: calc(-56rem / 13.34);
+    }
+    .ctlg_left_nav{
+        left: calc(-140rem / 13.34);
+    }
+    .contents_top_states{
+        top: calc(-84rem / 13.34);
+    }
+    .contents_top_nav{
+        top: calc(-60rem / 13.34); 
+    }
+    .contents_detail{
+        width: 100%!important;
+        height: 100%!important;
+        left: 0!important;
+        top: 0!important;
+    }
+}
+.ctlg_top_header,.ctlg_left_nav,.contents_top_states,.contents_top_nav,.contents_detail{
+    transition-duration: .3s;
+}
+/* e : fullScreen`*/
+
+.wrapper_skm_ctlg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.ctlg_top_header,.ctlg_left_nav,.ctlg_right_contents{
+    display: inline-block;
+    position: absolute;
+}
+.ctlg_top_header{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: $px56;
+    background: #fff;
+    border-bottom: $px1 solid #e5e5e5;
+    .ctlg_header_menus{
+        position: absolute;
+        right: $px80;
+        top: 50%;
+        transform: translate(0,-50%);
+        font-size: 0;
+        dl{
+            display: inline-block;
+            &+dl{
+                margin-left: $px30;
+            }
+            dt,dd{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            dt{
+                width: $px20;
+                height: $px20;
+                margin-right: $px4;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                &.icon_search{
+                    background-image: search(222);
+                }
+                &.icon_fav{
+                    background-image: heart(222);
+                }
+                &.icon_logout{
+                    background-image: url(../images/icon/icon_logout.svg);
+                }
+            }
+            dd{
+                line-height: $px30;
+                font-size: $px13;
+                color: #666;
+            }
+        }//dl
+    }//ctlg_header_menus
+}
+.ctlg_left_nav{
+    left: 0;
+    top: $px56;
+    width: $px140;
+    height: calc(100% - 56rem / 13.34);
+    padding-top: $px60;
+    background: #fff;
+    border-right: $px1 solid #e5e5e5;
+    h1.skm_ctlg_logo{
+        width: 100%;
+        height: $px48;
+        margin-bottom: $px74;
+        background: url(../images/icon/skm_logo.svg)no-repeat center left $px20 / $px94;
+    }
+    ul{
+        li{
+            padding: $px40 0 $px40 $px20;
+            font-family: $notoB;
+            font-size: $px16;
+        }
+    }
+}
+.ctlg_right_contents{
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 140rem / 13.34);
+    height: calc(100% - 56rem / 13.34);
+    background: #fff;
+    overflow: auto;
+    .contents_top_nav{
+        position: fixed;
+        left: $px140;
+        top: $px56;
+        width: calc(100% - 140rem / 13.34);
+        height: $px60;
+        background: #f8f8f8;
+        font-size: 0;
+        z-index: 899;
+        &.leftEnd{
+            .btn_categories_prev{
+                opacity: .5;
+            }
+        }
+        &.rightEnd{
+            .btn_categories_next{
+                opacity: .5
+            }
+        }
+        ul.nav_categories{
+            display: inline-block;
+            width: calc(100% - 160rem / 13.34);
+            font-size: 0;
+            vertical-align: middle;
+            overflow-y: hidden;
+            overflow-x: auto;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            /* 스크롤바 숨기기 */
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+            &::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera*/
+            }
+            /* 스크롤바 숨기기 */
+            li{
+                display: inline-block;
+                width: 20%;
+                height: $px60;
+                line-height: $px56;
+                font-size: $px16;
+                text-align: center;
+                span{
+                    font-family: $robotoB;
+                    color: #999;
+                }
+                &.on{
+                    border-bottom: $px3 solid $skm_red;
+                    color: $skm_red;
+                    span{
+                        color: $skm_red;
+                    }
+                }
+            }
+        }
+        .btn_categories_next{
+            transform: rotate(180deg);
+        }
+        .btn_categories_prev,.btn_categories_next{
+            display: inline-block;
+            width: $px80;
+            height: 100%;
+            vertical-align: middle;
+            background-size: $px9;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: arrow(222);
+            opacity: 1;
+        }
+        & ~ .contents_detail{
+            height: calc(100% - (116rem / 13.34));
+            top: $px116;
+        }
+    }//contents_top_nav
+    .contents_top_states{
+        display: table;
+        table-layout: fixed;
+        position: fixed;
+        left: $px140;
+        top: $px56;
+        width: calc(100% - 140rem / 13.34);
+        height: $px84;
+        line-height: $px84;
+        background: #f8f8f8;
+        font-size: 0;
+        padding: 0 $px80;
+        z-index: 899;
+        .top_states_message{
+            display: table-cell;
+            font-size: $px16;
+            vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .searchedFav,.searchedKeyword{
+                margin-right: $px6;
+                font-family: $robotoB, $notoB;
+                font-size: $px28;
+                vertical-align: sub;
+            }
+            .searchedFav{
+                color: #ff7a01;
+            }
+            .searchedKeyword{
+                color: $skm_red;
+                &:before{
+                    content: '"';
+                }
+                &:after{
+                    content: '"';
+                }                
+            }
+            .countSearched{
+                font-size: $px24;
+                font-family: $robotoB, $notoB;
+                vertical-align: top;
+                margin: 0 $px4;
+            }
+        }
+        .top_states_buttons{
+            display: table-cell;
+            padding: 0 $px28;
+            text-align: right;
+            button{
+                vertical-align: middle;
+            }
+            button + button{
+                margin-left: $px10;
+            }
+        }
+        .btn_states_close{
+            display: table-cell;
+            width: $px24;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            background-image: close(222);
+            vertical-align: middle;
+        }
+        & ~ .contents_detail{
+            height: calc(100% - (140rem / 13.34));
+            top: $px140;
+        }
+    }
+    .contents_detail{
+        display: inline-block;
+        width: calc(100% - (140rem / 13.34));
+        height: calc(100% - (56rem / 13.34));
+        position: fixed;
+        left: $px140;
+        top: $px56;
+        overflow: auto;
+    }
+}
+/* e : 레이아웃 */
+
+
+// s : *********************** 엘리먼트 ***********************
+button[class^=btn_type]{
+    width: $px180;
+    height: $px48;
+    line-height: calc(100% - (6rem / 13.34));
+    border: 0;
+    border-radius: 100rem;
+    color: #fff;
+    font-family: $robotoB, $notoB;
+    font-size: $px16;
+}
+.btn_type_01{
+    background-color: $skm_red;
+}
+.btn_type_02{
+    background-color: #666;
+}
+/* s : 로그인 */
+.skm_ctlg_login{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    h1.skm_ctlg_logo{
+        margin: 0 auto;
+        width: $px113;
+        height: $px58;
+        margin-bottom: $px40;
+        background: url(../images/icon/skm_logo.svg)no-repeat center / 100%;
+    }
+    .wrapper_login{
+        display: inline-block;
+        width: $px400;
+        input{
+            appearance: none;
+        }
+        input[type=text],input[type=password]{
+            width: 100%;
+            height: $px52;
+            padding: 0 $px20;
+            border: $px1 solid #e7e7e7;
+            font-family: $robotoR, $notoR;
+            font-size: $px18;
+            color: #222;
+            &::placeholder{
+                color: #666;
+            }
+        }
+        input[type=text]{
+            margin-bottom: $px10;
+        }
+        input[type=password]{
+            margin-bottom: $px14;
+        }
+        input[type=checkbox]{
+            width: $px20;
+            height: $px20;
+            border: $px1 solid #c2c2c2;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: $px14;
+            background-color: #fff;
+            background-image: check(c2c2c2);
+            & + label{
+                display: inline-block;
+                height: $px20;
+                line-height: $px20;
+                margin-left: $px6;
+                vertical-align: middle;
+                font-family: $robotoR, $notoR;         
+                font-size: $px14;
+            }
+            &:checked{
+                background-image: check(fff);
+                background-color: $skm_red;
+                border-color: $skm_red;
+            }
+        }
+        button{
+            width: 100%;
+            height: $px52;
+            margin-top: $px40;
+            border: 0;
+            background: $skm_red;
+            color: #fff;
+            font-family: $robotoB, $notoB;
+            font-size: $px18;
+        }
+    }
+}
+/* e : 로그인 */
+
+/* s : 상품 레이어 팝업 */
+.layer_mask,.popup_layer_contents{
+    display: inline-block;
+    position: fixed;
+}
+.layer_mask{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 998;
+}
+.test{
+    height: 3000px;
+}
+.btn_layer_prev,.btn_layer_next{
+    width: $px100;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-size: $px23;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: arrow(fff);
+    z-index: 999;
+    transition-duration: .3s;
+}
+.btn_layer_prev{
+    left: 0;
+}
+.btn_layer_next{
+    right: 0;
+    transform: rotate(180deg);
+}
+.wrapper_popup_layer{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none;
+    user-select: none;
+    &.on{
+        display: inline-block;
+    }
+    .btn_layer_prev,.btn_layer_next{
+        display: none;
+    }    
+    &.multi{
+        .btn_layer_prev,.btn_layer_next{
+            display: inline-block;
+        }
+    }
+    &.leftEnd{
+        .btn_layer_prev{
+            opacity: .3;
+        }
+    }
+    &.rightEnd{
+        .btn_layer_next{
+            opacity: .3;
+        }
+    }    
+}
+
+.popup_layer_contents{
+    display: none;
+    left: 50%;
+    top: 50%;
+    width: calc(100% - (200rem / 13.34));
+    height: calc(100% - (200rem / 13.34));
+    padding-top: $px50;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    white-space: nowrap;
+    overflow: hidden;
+    &.on{
+        display: block;
+    }
+    .btn_layer_close{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: $px50;
+        height: $px50;
+        background-repeat: no-repeat;
+        background-size: $px24;
+        background-position: center;
+        background-image: close(fff);
+        background-color: #222;
+        z-index: 1;
+    }
+    .slide_handler{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        font-size: 0;
+        transition-duration: .3s;
+    }
+    .layer_page{
+        display: inline-block;
+        width: 100%;
+        height: calc(100% - (50rem / 13.34));
+        overflow-y: auto;
+        overflow-x: hidden;
+        font-size: $px30;
+        text-align: center;
+    }
+}
+/* e : 상품 레이어 팝업 */
+
+/* s : 검색 레이어 팝업 */
+.popup_search_bar{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: $px600;
+    height: $px64;
+    background-color: #fff;
+    border-radius: 100rem;
+    z-index: 999;
+    font-size: 0;
+    &.on{
+        display: inline-block;
+    }
+    input[type=text]{
+        appearance: none;
+        width: calc(100% - (128rem / 13.34));
+        height: 100%;
+        border: 0;
+        background: #fff;
+        vertical-align: top;
+        font-family: $robotoR, $notoR;
+        font-size: $px18;
+        color: #222;
+        &::placeholder{
+            color: #666;
+        }
+        &:focus{
+            outline: 0;
+        }
+    }
+    .btn_close_search,.btn_do_search{
+        display: inline-block;
+        width: $px64;
+        height: $px64;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .btn_close_search{
+        background-image: url(../images/icon/icon_back.svg);
+        background-size: $px23;
+    }
+    .btn_do_search{
+        background-image: search(e3163a);
+        background-size: $px26;
+    }
+}
+/* e : 검색 레이어 팝업 */
+
+/* s : 비교하기 테이블 */
+.wrapper_compare_table{
+    padding: 0 $px50 $px50;
+    table{
+        width: 100%;
+        table-layout: fixed;
+        text-align: left;
+        border-top: $px2 solid #222;
+        caption{
+            font-family: $robotoB, $notoB;
+            font-size: $px28;
+            text-align: left;
+            margin-bottom: $px20;
+        }
+        tbody{
+            font-size: $px15;
+            tr{
+                border-bottom: $px1 solid #e5e5e5;
+                th,td{
+                    padding: $px16;
+                }
+                th{
+                    font-family: $robotoM, $notoM;
+                    background: #f8f8f8;
+                    vertical-align: middle;
+                }
+                td{
+                    font-family: $robotoR, $notoR;
+                    & + td{
+                        border-left: $px1 solid #e5e5e5;
+                    }
+                    ul{
+                        li{
+                            line-height: $px30;
+                        }
+                    }
+                    .prd_title{
+                        white-space: initial;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                        border-bottom: 0;
+                        .title_m{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }                    
+                }
+            }
+            .prd_img{
+                td{
+                    text-align: center;
+                    img{
+                        max-width: 100%;
+                    }
+                }
+            }//prd_img            
+            .rentalPrice{
+                td{
+                   font-family: $robotoB,$notoB;
+                   color: #ff7a01;
+                   font-size: $px24;
+                }
+            }
+        }
+    }//table
+}//wrapper_compare_table
+/* e : 비교하기 테이블 */
+
+/* s : 메인 상품 리스트 */
+.wrapper_prd_list{
+    padding: $px50 $px80;
+    font-size: 0;
+    overflow: hidden;
+    .prd_list_box{
+        display: inline-block;
+        width: calc(50% - (40rem / 13.34));
+        margin-bottom: $px50;
+        overflow: hidden;
+        &:nth-child(2n){
+            float: right;
+        }
+        &:nth-child(2n - 1){
+            float: left;
+        }        
+        > *{
+            vertical-align: top;
+        }
+        .prd_detail{
+            float: left;
+            width: $px210;
+            text-align: center;
+            .prd_img{
+                margin-bottom: $px24;
+                img{
+                    max-width: 100%;
+                }
+            }//prd_img
+            .prd_state{
+                > div{
+                    display: inline-block;
+                    width: $px90;
+                    height: $px44;
+                    line-height: $px42;
+                    border: $px1 solid #e7e7e7;
+                    border-radius: 100rem;
+                    &+div{
+                        margin-left: $px6;
+                    }
+                    >*{
+                        vertical-align: middle;
+                    }
+                    i{
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        margin-right: $px4;
+                    }
+                    span{
+                        font-size: $px10;
+                        font-family: $notoR;
+                        color: #666;
+                    }
+                    &.on{
+                        span{
+                            color: #fff;
+                        }
+                    }
+                }
+                .icon_state_compare{
+                    i{
+                        width: $px20;
+                        height: $px16;
+                        background-image: check(999);
+                    }
+                    &.on{
+                        background-color: $skm_red;
+                        border-color: $skm_red;
+                        i{
+                            background-image: check(fff);
+                        }
+                    }
+                }//icon_state_compare
+                .icon_state_fav{
+                    i{
+                        width: $px20;
+                        height: $px16;
+                        background-image: heart(999);
+                    }
+                    &.on{
+                        background-color: #ff7a01;
+                        border-color: #ff7a01;
+                        i{
+                            background-image: heart(fff);
+                        }
+                    }
+                }//icon_state_fav
+            }//prd_state
+        }//prd_detail
+        .prd_info{
+            float: right;
+            width: calc(100% - (240rem / 13.34));
+            text-align: left;
+            font-size: 0;
+            dl{
+                margin-bottom: $px3;
+                dt{
+                    display: inline-block;
+                    width: $px60;
+                    color: #222;
+                    vertical-align: top;
+                    font-size: $px12;
+                }//th
+                dd{
+                    display: inline-block;
+                    width: calc(100% - (60rem / 13.34));
+                    color: #666;
+                    font-size: $px12;
+                    ul{
+                        li{
+                            display: inline-block;
+                            width: 100%;
+                            padding-bottom: $px9;
+                        }
+                    }                        
+                }//td
+                &.prd_price{
+                    margin-bottom: $px20;
+                    > *{
+                        vertical-align: middle;
+                    }
+                    dd{
+                        font-size: $px26;
+                        font-family: $robotoB;
+                        color: #ff7a01;
+                        vertical-align: middle;
+                    }
+                }
+            }//tr
+        }//prd_info
+    }//prd_list_box
+}//wrapper_prd_list
+.prd_title{
+    padding-bottom: $px24;
+    margin-bottom: $px24;            
+    border-bottom: $px1 solid #c2c2c2;
+    font-family: $robotoB,$notoB;
+    overflow: hidden;
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .prd_fav_checkbox{
+        float: left;
+        width: $px44;
+        height: $px44;
+        appearance: none;
+        border: $px1 solid #c1c1c1;
+        background-image: check(c2c2c2);
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: $px24;
+        background-position: center;
+
+        &:checked{
+            background-image: check(fff);
+            background-color: #222;
+            border-color: #222;
+        }
+        & ~ [class^=title_]{
+            width: calc(100% - (44rem / 13.34));
+            padding-left: $px20;
+        }
+    }            
+    .title_s{
+        width: 100%;
+        font-size: $px14;
+        padding-bottom: $px6;
+    }//title_s
+    .title_m{
+        width: calc(100% - (90rem / 13.34));
+        font-size: $px24;
+        height: $px24;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        span{
+            color: #999;
+            margin-left: $px6;
+        }
+    }//title_m
+    .prd_recommend{
+        width: $px90;
+        text-align: right;
+        i{
+            width: $px40;
+            height: $px20;
+            &+i{
+                margin-left: $px6;
+            }
+        }
+        .icon_new{
+            background-image: url(../images/icon/icon_new.svg);
+        }
+        .icon_hit{
+            background-image: url(../images/icon/icon_hit.svg);
+        }
+    }//prd_recommend
+}//prd_title
+/* e : 메인 상품 리스트 */
+
+.wrapper_compare_buttons{
+    display: none;
+    position: fixed;
+    bottom: $px60;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 0;
+    &.on{
+        display: inline-block;
+    }
+    > *{
+        display: inline-block;
+        vertical-align: middle;
+        box-shadow: 0 $px5 $px10 0 rgba(0,0,0,.25);
+    }
+    .btn_go_compare{
+        width: $px200;
+        height: $px62;
+        line-height: $px62;
+        background-color: $skm_red;
+        border-radius: 100rem;
+        text-align: center;
+        color: #fff;
+        font-family: $robotoB,$notoB;
+        font-size: $px16;
+        margin-right: $px10;
+    }
+    .btn_close_compare{
+        width: $px62;
+        height: $px62;
+        border-radius: 100%;
+        background-image: close(fff);
+        background-repeat: no-repeat;
+        background-size: $px14;
+        background-position: center;
+        background-color: #222;
+    }
+}
+
+// e : *********************** 엘리먼트 ***********************

@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 18" width="23" height="18">
+	<title>뒤로</title>
+	<defs>
+		<image width="23" height="18" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAASCAYAAACw50UTAAAABHNCSVQICAgIfAhkiAAAANBJREFUOE9jZMADUlNTDYDS/b9//w5csGDBB3xqsckx4tIANXg/IyOjAFBN46xZsxqoYjiawQuBBieQajBIPYbLqWUwhuHUNBjFcGobDDecFgaDDYcafASYKriB/L3//v3rIyfysCbFtLQ0UPrlp5aByOYwAg1fABSIB+LfQNef+P///ydqWQROijALgAaDfOE4e/bsC9SwAJ7OaWEBSiaitgUYOZSaFmAtuKhlAc5SkRoW4DQcKRUFAFORAzkpCK/hIAsyMjIUZsyY8YCcpAkAVTp4oJgr7QoAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="뒤로" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>
