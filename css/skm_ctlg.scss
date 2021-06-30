@@ -187,6 +187,22 @@ body.navoff{
                 }
                 &.icon_fav{
                     background-image: heart(222);
+                    position: relative;
+                    span{
+                        position: absolute;
+                        right: -50%;
+                        top: -50%;
+                        display: inline-block;
+                        width: $px20;
+                        height: $px20;
+                        line-height: $px22;
+                        text-align: center;
+                        background: #ff7a01;
+                        border-radius: 100%;
+                        font-size: $px10;
+                        font-family: $robotoM,$notoM;
+                        color: #fff;
+                    }
                 }
                 &.icon_logout{
                     background-image: url(../images/icon/icon_logout.svg);
