@@ -199,7 +199,7 @@ body.navoff .contents_detail {
   display: inline-block;
   width: calc(20rem / 13.34);
   height: calc(20rem / 13.34);
-  line-height: calc(22rem / 13.34);
+  line-height: calc(20rem / 13.34);
   text-align: center;
   background: #ff7a01;
   border-radius: 100%;
