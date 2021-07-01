@@ -1281,10 +1281,10 @@ button[class^=btn_type] {
 .wrapper_marketing_agree .marketing_agree_buttons {
   font-size: 0;
   margin-bottom: calc(80rem / 7.5);
+  overflow: hidden;
 }
 
 .wrapper_marketing_agree .marketing_agree_buttons button {
-  display: inline-block;
   height: calc(120rem / 7.5);
   border-radius: 100rem;
   font-family: "robotoBold", "notoSansBold";
@@ -1292,14 +1292,15 @@ button[class^=btn_type] {
 }
 
 .wrapper_marketing_agree .marketing_agree_buttons .btn_agree {
-  width: calc(100% - (210rem / 7.5));
-  margin-right: calc(10rem / 7.5);
+  float: left;
+  width: calc(100% - (212rem / 7.5));
   color: #fff;
   background: #e3163a;
   border: calc(2rem / 7.5) solid #e3163a;
 }
 
 .wrapper_marketing_agree .marketing_agree_buttons .btn_disagree {
+  float: right;
   width: calc(200rem / 7.5);
   color: #666;
   background: #fff;

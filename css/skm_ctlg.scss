@@ -1119,21 +1119,22 @@ button[class^=btn_type]{
     .marketing_agree_buttons{
         font-size: 0;
         margin-bottom: mobile(80);
+        overflow: hidden;
         button{
-            display: inline-block;
             height: mobile(120);
             border-radius: 100rem;
             font-family: $robotoB,$notoB;
             font-size: mobile(32);
         }
         .btn_agree{
-            width: calc(100% - (210rem / 7.5));
-            margin-right: mobile(10);
+            float: left;
+            width: calc(100% - (212rem / 7.5));
             color: #fff;
             background: $skm_red;
             border: mobile(2) solid $skm_red;
         }
         .btn_disagree{
+            float: right;
             width: mobile(200);
             color: #666;
             background: #fff;
