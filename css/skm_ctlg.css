@@ -1194,4 +1194,124 @@ button[class^=btn_type] {
 }
 
 /* e : 비교하기 버튼 */
+/* s : 마케팅 활용 동의 모바일 랜딩페이지 */
+.wrapper_marketing_agree {
+  padding: calc(80rem / 7.5) calc(40rem / 7.5) calc(120rem / 7.5);
+}
+
+.wrapper_marketing_agree .marketing_agree_title {
+  font-family: "robotoBold", "notoSansBold";
+  font-size: calc(44rem / 7.5);
+  line-height: calc(66rem / 7.5);
+  padding-bottom: calc(40rem / 7.5);
+  margin-bottom: calc(40rem / 7.5);
+  border-bottom: calc(4rem / 7.5) solid #222;
+}
+
+.wrapper_marketing_agree .marketing_agree_detail {
+  font-family: "robotoMedium", "notoSansMedium";
+  font-size: calc(32rem / 7.5);
+  line-height: calc(46rem / 7.5);
+  margin-bottom: calc(40rem / 7.5);
+}
+
+.wrapper_marketing_agree .marketing_agree_list {
+  background: #f8f8f8;
+  padding: calc(40rem / 7.5) calc(30rem / 7.5);
+  margin-bottom: calc(30rem / 7.5);
+}
+
+.wrapper_marketing_agree .marketing_agree_list dl + dl {
+  margin-top: calc(40rem / 7.5);
+}
+
+.wrapper_marketing_agree .marketing_agree_list dl dt {
+  font-size: calc(26rem / 7.5);
+  font-family: "robotoBold", "notoSansBold";
+}
+
+.wrapper_marketing_agree .marketing_agree_list dl dd {
+  font-size: calc(28rem / 7.5);
+  font-family: "robotoRegular", "notoSansRegular";
+  margin-top: calc(20rem / 7.5);
+  padding-left: calc(16rem / 7.5);
+}
+
+.wrapper_marketing_agree ul.marketing_agree_notice {
+  margin-bottom: calc(60rem / 7.5);
+}
+
+.wrapper_marketing_agree ul.marketing_agree_notice li {
+  padding-left: calc(20rem / 7.5);
+  font-family: "robotoRegular", "notoSansRegular";
+  font-size: calc(26rem / 7.5);
+  line-height: calc(38rem / 7.5);
+  color: #666;
+  position: relative;
+  letter-spacing: calc(-1 * (1rem / 7.5));
+}
+
+.wrapper_marketing_agree ul.marketing_agree_notice li:before {
+  position: absolute;
+  left: 0;
+  content: "\2022";
+}
+
+.wrapper_marketing_agree table.marketing_agree_info {
+  width: 100%;
+  border-top: calc(2rem / 7.5) solid #222;
+  font-family: "robotoBold", "notoSansBold";
+  font-size: calc(26rem / 7.5);
+  text-align: left;
+  margin-bottom: calc(80rem / 7.5);
+}
+
+.wrapper_marketing_agree table.marketing_agree_info tbody tr {
+  border-bottom: calc(2rem / 7.5) solid #c2c2c2;
+}
+
+.wrapper_marketing_agree table.marketing_agree_info tbody tr th, .wrapper_marketing_agree table.marketing_agree_info tbody tr td {
+  padding: calc(30rem / 7.5);
+}
+
+.wrapper_marketing_agree table.marketing_agree_info tbody tr th {
+  background: #f8f8f8;
+}
+
+.wrapper_marketing_agree .marketing_agree_buttons {
+  font-size: 0;
+  margin-bottom: calc(80rem / 7.5);
+}
+
+.wrapper_marketing_agree .marketing_agree_buttons button {
+  display: inline-block;
+  height: calc(120rem / 7.5);
+  border-radius: 100rem;
+  font-family: "robotoBold", "notoSansBold";
+  font-size: calc(32rem / 7.5);
+}
+
+.wrapper_marketing_agree .marketing_agree_buttons .btn_agree {
+  width: calc(100% - (210rem / 7.5));
+  margin-right: calc(10rem / 7.5);
+  color: #fff;
+  background: #e3163a;
+  border: calc(2rem / 7.5) solid #e3163a;
+}
+
+.wrapper_marketing_agree .marketing_agree_buttons .btn_disagree {
+  width: calc(200rem / 7.5);
+  color: #666;
+  background: #fff;
+  border: calc(2rem / 7.5) solid #666;
+}
+
+.wrapper_marketing_agree .marketing_agree_footer {
+  text-align: center;
+  font-family: "robotoBold", "notoSansBold";
+  font-size: calc(32rem / 7.5);
+  color: #999;
+}
+
+/* e : 마케팅 활용 동의 모바일 랜딩페이지 */
 /*# sourceMappingURL=skm_ctlg.css.map */

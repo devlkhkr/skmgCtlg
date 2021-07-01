@@ -97,19 +97,19 @@ html{
 #navTrigger{
     display: inline-block;
     position: fixed;
-    bottom: $px20;
-    left: $px20;
+    bottom: tablet(20);
+    left: tablet(20);
     appearance: none;
     z-index: 998;
-    width: $px40;
-    height: $px40;
+    width: tablet(40);
+    height: tablet(40);
     background: #fff;
-    border: $px2 solid #999;
+    border: tablet(2) solid #999;
     border-radius: 100%;
     transition-duration: .3s;
     background-image: arrow(222);
     background-repeat: no-repeat;
-    background-size: $px6;
+    background-size: tablet(6);
     background-position: center;
     transform: rotate(180deg);
     &:checked{
@@ -154,28 +154,28 @@ body.navoff{
     left: 0;
     top: 0;
     width: 100%;
-    height: $px56;
+    height: tablet(56);
     background: #fff;
-    border-bottom: $px1 solid #e5e5e5;
+    border-bottom: tablet(1) solid #e5e5e5;
     .ctlg_header_menus{
         position: absolute;
-        right: $px80;
+        right: tablet(80);
         top: 50%;
         transform: translate(0,-50%);
         font-size: 0;
         dl{
             display: inline-block;
             &+dl{
-                margin-left: $px30;
+                margin-left: tablet(30);
             }
             dt,dd{
                 display: inline-block;
                 vertical-align: middle;
             }
             dt{
-                width: $px20;
-                height: $px20;
-                margin-right: $px4;
+                width: tablet(20);
+                height: tablet(20);
+                margin-right: tablet(4);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: contain;
@@ -190,13 +190,13 @@ body.navoff{
                         right: -50%;
                         top: -50%;
                         display: inline-block;
-                        width: $px20;
-                        height: $px20;
-                        line-height: $px20;
+                        width: tablet(20);
+                        height: tablet(20);
+                        line-height: tablet(20);
                         text-align: center;
                         background: #ff7a01;
                         border-radius: 100%;
-                        font-size: $px10;
+                        font-size: tablet(10);
                         font-family: $robotoM,$notoM;
                         color: #fff;
                     }
@@ -206,8 +206,8 @@ body.navoff{
                 }
             }
             dd{
-                line-height: $px30;
-                font-size: $px13;
+                line-height: tablet(30);
+                font-size: tablet(13);
                 color: #666;
             }
         }//dl
@@ -215,23 +215,23 @@ body.navoff{
 }
 .ctlg_left_nav{
     left: 0;
-    top: $px56;
-    width: $px140;
+    top: tablet(56);
+    width: tablet(140);
     height: calc(100% - 56rem / 13.34);
-    padding-top: $px60;
+    padding-top: tablet(60);
     background: #fff;
-    border-right: $px1 solid #e5e5e5;
+    border-right: tablet(1) solid #e5e5e5;
     h1.skm_ctlg_logo{
         width: 100%;
-        height: $px48;
-        margin-bottom: $px74;
-        background: url(../images/icon/skm_logo.svg)no-repeat center left $px20 / $px94;
+        height: tablet(48);
+        margin-bottom: tablet(74);
+        background: url(../images/icon/skm_logo.svg)no-repeat center left tablet(20) / tablet(94);
     }
     ul{
         li{
-            padding: $px40 0 $px40 $px20;
+            padding: tablet(40) 0 tablet(40) tablet(20);
             font-family: $notoB;
-            font-size: $px16;
+            font-size: tablet(16);
         }
     }
 }
@@ -244,10 +244,10 @@ body.navoff{
     overflow: auto;
     .contents_top_nav{
         position: fixed;
-        left: $px140;
-        top: $px56;
+        left: tablet(140);
+        top: tablet(56);
         width: calc(100% - 140rem / 13.34);
-        height: $px60;
+        height: tablet(60);
         background: #f8f8f8;
         font-size: 0;
         z-index: 899;
@@ -280,16 +280,16 @@ body.navoff{
             li{
                 display: inline-block;
                 width: 20%;
-                height: $px60;
-                line-height: $px56;
-                font-size: $px16;
+                height: tablet(60);
+                line-height: tablet(56);
+                font-size: tablet(16);
                 text-align: center;
                 span{
                     font-family: $robotoB;
                     color: #999;
                 }
                 &.on{
-                    border-bottom: $px3 solid $skm_red;
+                    border-bottom: tablet(3) solid $skm_red;
                     color: $skm_red;
                     span{
                         color: $skm_red;
@@ -302,10 +302,10 @@ body.navoff{
         }
         .btn_categories_prev,.btn_categories_next{
             display: inline-block;
-            width: $px80;
+            width: tablet(80);
             height: 100%;
             vertical-align: middle;
-            background-size: $px9;
+            background-size: tablet(9);
             background-repeat: no-repeat;
             background-position: center;
             background-image: arrow(222);
@@ -313,33 +313,33 @@ body.navoff{
         }
         & ~ .contents_detail{
             height: calc(100% - (116rem / 13.34));
-            top: $px116;
+            top: tablet(116);
         }
     }//contents_top_nav
     .contents_top_states{
         display: table;
         table-layout: fixed;
         position: fixed;
-        left: $px140;
-        top: $px56;
+        left: tablet(140);
+        top: tablet(56);
         width: calc(100% - 140rem / 13.34);
-        height: $px84;
-        line-height: $px84;
+        height: tablet(84);
+        line-height: tablet(84);
         background: #f8f8f8;
         font-size: 0;
-        padding: 0 $px80;
+        padding: 0 tablet(80);
         z-index: 899;
         .top_states_message{
             display: table-cell;
-            font-size: $px16;
+            font-size: tablet(16);
             vertical-align: middle;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             .searchedFav,.searchedKeyword{
-                margin-right: $px6;
+                margin-right: tablet(6);
                 font-family: $robotoB, $notoB;
-                font-size: $px28;
+                font-size: tablet(28);
                 vertical-align: sub;
             }
             .searchedFav{
@@ -355,26 +355,26 @@ body.navoff{
                 }                
             }
             .countSearched{
-                font-size: $px24;
+                font-size: tablet(24);
                 font-family: $robotoB, $notoB;
                 vertical-align: top;
-                margin: 0 $px4;
+                margin: 0 tablet(4);
             }
         }
         .top_states_buttons{
             display: table-cell;
-            padding: 0 $px28;
+            padding: 0 tablet(28);
             text-align: right;
             button{
                 vertical-align: middle;
             }
             button + button{
-                margin-left: $px10;
+                margin-left: tablet(10);
             }
         }
         .btn_states_close{
             display: table-cell;
-            width: $px24;
+            width: tablet(24);
             height: 100%;
             background-repeat: no-repeat;
             background-position: center;
@@ -384,7 +384,7 @@ body.navoff{
         }
         & ~ .contents_detail{
             height: calc(100% - (140rem / 13.34));
-            top: $px140;
+            top: tablet(140);
         }
     }
     .contents_detail{
@@ -392,8 +392,8 @@ body.navoff{
         width: calc(100% - (140rem / 13.34));
         height: calc(100% - (56rem / 13.34));
         position: fixed;
-        left: $px140;
-        top: $px56;
+        left: tablet(140);
+        top: tablet(56);
         overflow: auto;
     }
 }
@@ -402,14 +402,14 @@ body.navoff{
 
 // s : *********************** 엘리먼트 ***********************
 button[class^=btn_type]{
-    width: $px180;
-    height: $px48;
+    width: tablet(180);
+    height: tablet(48);
     line-height: calc(100% - (6rem / 13.34));
     border: 0;
     border-radius: 100rem;
     color: #fff;
     font-family: $robotoB, $notoB;
-    font-size: $px16;
+    font-size: tablet(16);
 }
 .btn_type_01{
     background-color: $skm_red;
@@ -426,53 +426,53 @@ button[class^=btn_type]{
     transform: translate(-50%,-50%);
     h1.skm_ctlg_logo{
         margin: 0 auto;
-        width: $px113;
-        height: $px58;
-        margin-bottom: $px40;
+        width: tablet(113);
+        height: tablet(58);
+        margin-bottom: tablet(40);
         background: url(../images/icon/skm_logo.svg)no-repeat center / 100%;
     }
     .wrapper_login{
         display: inline-block;
-        width: $px400;
+        width: tablet(400);
         input{
             appearance: none;
         }
         input[type=text],input[type=password]{
             width: 100%;
-            height: $px52;
-            padding: 0 $px20;
-            border: $px1 solid #e7e7e7;
+            height: tablet(52);
+            padding: 0 tablet(20);
+            border: tablet(1) solid #e7e7e7;
             font-family: $robotoR, $notoR;
-            font-size: $px18;
+            font-size: tablet(18);
             color: #222;
             &::placeholder{
                 color: #666;
             }
         }
         input[type=text]{
-            margin-bottom: $px10;
+            margin-bottom: tablet(10);
         }
         input[type=password]{
-            margin-bottom: $px14;
+            margin-bottom: tablet(14);
         }
         input[type=checkbox]{
-            width: $px20;
-            height: $px20;
-            border: $px1 solid #c2c2c2;
+            width: tablet(20);
+            height: tablet(20);
+            border: tablet(1) solid #c2c2c2;
             vertical-align: middle;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: $px14;
+            background-size: tablet(14);
             background-color: #fff;
             background-image: check(c2c2c2);
             & + label{
                 display: inline-block;
-                height: $px20;
-                line-height: $px20;
-                margin-left: $px6;
+                height: tablet(20);
+                line-height: tablet(20);
+                margin-left: tablet(6);
                 vertical-align: middle;
                 font-family: $robotoR, $notoR;         
-                font-size: $px14;
+                font-size: tablet(14);
             }
             &:checked{
                 background-image: check(fff);
@@ -482,13 +482,13 @@ button[class^=btn_type]{
         }
         button{
             width: 100%;
-            height: $px52;
-            margin-top: $px40;
+            height: tablet(52);
+            margin-top: tablet(40);
             border: 0;
             background: $skm_red;
             color: #fff;
             font-family: $robotoB, $notoB;
-            font-size: $px18;
+            font-size: tablet(18);
         }
     }
 }
@@ -511,11 +511,11 @@ button[class^=btn_type]{
     height: 3000px;
 }
 .btn_layer_prev,.btn_layer_next{
-    width: $px100;
+    width: tablet(100);
     height: 100%;
     position: fixed;
     top: 0;
-    background-size: $px23;
+    background-size: tablet(23);
     background-repeat: no-repeat;
     background-position: center;
     background-image: arrow(fff);
@@ -565,14 +565,14 @@ button[class^=btn_type]{
     height: calc(100% - (200rem / 13.34));
 }
 .popup_layer_contents_small{
-    width: $px700;
-    height: $px320;
+    width: tablet(700);
+    height: tablet(320);
 }
 .popup_layer_contents,.popup_layer_contents_small{
     display: none;
     left: 50%;
     top: 50%;
-    padding-top: $px50;
+    padding-top: tablet(50);
     background-color: #fff;
     transform: translate(-50%,-50%);
     z-index: 999;
@@ -585,10 +585,10 @@ button[class^=btn_type]{
         position: absolute;
         right: 0;
         top: 0;
-        width: $px50;
-        height: $px50;
+        width: tablet(50);
+        height: tablet(50);
         background-repeat: no-repeat;
-        background-size: $px24;
+        background-size: tablet(24);
         background-position: center;
         background-image: close(fff);
         background-color: #222;
@@ -608,7 +608,7 @@ button[class^=btn_type]{
         height: calc(100% - (50rem / 13.34));
         overflow-y: auto;
         overflow-x: hidden;
-        font-size: $px30;
+        font-size: tablet(30);
         text-align: center;
     }
 }
@@ -621,8 +621,8 @@ button[class^=btn_type]{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: $px600;
-    height: $px64;
+    width: tablet(600);
+    height: tablet(64);
     background-color: #fff;
     border-radius: 100rem;
     z-index: 999;
@@ -638,7 +638,7 @@ button[class^=btn_type]{
         background: #fff;
         vertical-align: top;
         font-family: $robotoR, $notoR;
-        font-size: $px18;
+        font-size: tablet(18);
         color: #222;
         &::placeholder{
             color: #666;
@@ -649,18 +649,18 @@ button[class^=btn_type]{
     }
     .btn_close_search,.btn_do_search{
         display: inline-block;
-        width: $px64;
-        height: $px64;
+        width: tablet(64);
+        height: tablet(64);
         background-repeat: no-repeat;
         background-position: center;
     }
     .btn_close_search{
         background-image: url(../images/icon/icon_back.svg);
-        background-size: $px23;
+        background-size: tablet(23);
     }
     .btn_do_search{
         background-image: search(e3163a);
-        background-size: $px26;
+        background-size: tablet(26);
     }
 }
 /* e : 검색 레이어 팝업 */
@@ -670,46 +670,46 @@ button[class^=btn_type]{
 /* e : 마케팅 동의 레이어 팝업 */
 .wrapper_mkt{
     text-align: left;
-    padding: 0 $px54;
+    padding: 0 tablet(54);
     .mkt_title{
         font-family: $robotoB,$notoB;
-        font-size: $px28;
-        border-bottom: $px2 solid #222;
-        padding-bottom: $px20;
-        margin-bottom: $px20;
+        font-size: tablet(28);
+        border-bottom: tablet(2) solid #222;
+        padding-bottom: tablet(20);
+        margin-bottom: tablet(20);
     }
     .mkt_detail{
         font-family: $robotoR,$notoR;
-        font-size: $px18;
+        font-size: tablet(18);
         color: #444;
     }
     .mkt_info{
-        margin-top: $px46;
+        margin-top: tablet(46);
         .info_title{
             font-family: $robotoM,$notoM;
-            font-size: $px18;
-            margin-bottom: $px9;
+            font-size: tablet(18);
+            margin-bottom: tablet(9);
         }
         .info_call{
             font-size: 0;
             > *{
                 display: inline-block;
-                height: $px56;
+                height: tablet(56);
             }
             input{
                 appearance: none;
                 width: calc(100% - (150rem / 13.34));
-                margin-right: $px10;
-                padding: 0 $px20;
+                margin-right: tablet(10);
+                padding: 0 tablet(20);
                 font-family: $robotoR,$notoR;
-                font-size: $px20;
-                border: $px1 solid #c2c2c2;
+                font-size: tablet(20);
+                border: tablet(1) solid #c2c2c2;
                 color: #222;
             }
             button{
-                width: $px140;
+                width: tablet(140);
                 font-family: $robotoB,$notoB;
-                font-size: $px18;
+                font-size: tablet(18);
                 color: #fff;
                 background: $skm_red;
                 border-radius: 100rem;
@@ -720,24 +720,24 @@ button[class^=btn_type]{
 }
 /* s : 비교하기 테이블 */
 .wrapper_compare_table{
-    padding: 0 $px50 $px50;
+    padding: 0 tablet(50) tablet(50);
     table{
         width: 100%;
         table-layout: fixed;
         text-align: left;
-        border-top: $px2 solid #222;
+        border-top: tablet(2) solid #222;
         caption{
             font-family: $robotoB, $notoB;
-            font-size: $px28;
+            font-size: tablet(28);
             text-align: left;
-            margin-bottom: $px20;
+            margin-bottom: tablet(20);
         }
         tbody{
-            font-size: $px15;
+            font-size: tablet(15);
             tr{
-                border-bottom: $px1 solid #e5e5e5;
+                border-bottom: tablet(1) solid #e5e5e5;
                 th,td{
-                    padding: $px16;
+                    padding: tablet(16);
                 }
                 th{
                     font-family: $robotoM, $notoM;
@@ -747,11 +747,11 @@ button[class^=btn_type]{
                 td{
                     font-family: $robotoR, $notoR;
                     & + td{
-                        border-left: $px1 solid #e5e5e5;
+                        border-left: tablet(1) solid #e5e5e5;
                     }
                     ul{
                         li{
-                            line-height: $px30;
+                            line-height: tablet(30);
                         }
                     }
                     .prd_title{
@@ -778,7 +778,7 @@ button[class^=btn_type]{
                 td{
                    font-family: $robotoB,$notoB;
                    color: #ff7a01;
-                   font-size: $px24;
+                   font-size: tablet(24);
                 }
             }
         }
@@ -788,13 +788,13 @@ button[class^=btn_type]{
 
 /* s : 메인 상품 리스트 */
 .wrapper_prd_list{
-    padding: $px50 $px80;
+    padding: tablet(50) tablet(80);
     font-size: 0;
     overflow: hidden;
     .prd_list_box{
         display: inline-block;
         width: calc(50% - (40rem / 13.34));
-        margin-bottom: $px50;
+        margin-bottom: tablet(50);
         overflow: hidden;
         &:nth-child(2n){
             float: right;
@@ -807,10 +807,10 @@ button[class^=btn_type]{
         }
         .prd_detail{
             float: left;
-            width: $px210;
+            width: tablet(210);
             text-align: center;
             .prd_img{
-                margin-bottom: $px24;
+                margin-bottom: tablet(24);
                 img{
                     max-width: 100%;
                 }
@@ -818,13 +818,13 @@ button[class^=btn_type]{
             .prd_state{
                 > div{
                     display: inline-block;
-                    width: $px90;
-                    height: $px44;
-                    line-height: $px42;
-                    border: $px1 solid #e7e7e7;
+                    width: tablet(90);
+                    height: tablet(44);
+                    line-height: tablet(42);
+                    border: tablet(1) solid #e7e7e7;
                     border-radius: 100rem;
                     &+div{
-                        margin-left: $px6;
+                        margin-left: tablet(6);
                     }
                     >*{
                         vertical-align: middle;
@@ -834,10 +834,10 @@ button[class^=btn_type]{
                         background-repeat: no-repeat;
                         background-size: contain;
                         background-position: center;
-                        margin-right: $px4;
+                        margin-right: tablet(4);
                     }
                     span{
-                        font-size: $px10;
+                        font-size: tablet(10);
                         font-family: $notoR;
                         color: #666;
                     }
@@ -849,8 +849,8 @@ button[class^=btn_type]{
                 }
                 .icon_state_compare{
                     i{
-                        width: $px20;
-                        height: $px16;
+                        width: tablet(20);
+                        height: tablet(16);
                         background-image: check(999);
                     }
                     &.on{
@@ -863,8 +863,8 @@ button[class^=btn_type]{
                 }//icon_state_compare
                 .icon_state_fav{
                     i{
-                        width: $px20;
-                        height: $px16;
+                        width: tablet(20);
+                        height: tablet(16);
                         background-image: heart(999);
                     }
                     &.on{
@@ -883,34 +883,34 @@ button[class^=btn_type]{
             text-align: left;
             font-size: 0;
             dl{
-                margin-bottom: $px3;
+                margin-bottom: tablet(3);
                 dt{
                     display: inline-block;
-                    width: $px60;
+                    width: tablet(60);
                     color: #222;
                     vertical-align: top;
-                    font-size: $px12;
+                    font-size: tablet(12);
                 }//th
                 dd{
                     display: inline-block;
                     width: calc(100% - (60rem / 13.34));
                     color: #666;
-                    font-size: $px12;
+                    font-size: tablet(12);
                     ul{
                         li{
                             display: inline-block;
                             width: 100%;
-                            padding-bottom: $px9;
+                            padding-bottom: tablet(9);
                         }
                     }                        
                 }//td
                 &.prd_price{
-                    margin-bottom: $px20;
+                    margin-bottom: tablet(20);
                     > *{
                         vertical-align: middle;
                     }
                     dd{
-                        font-size: $px26;
+                        font-size: tablet(26);
                         font-family: $robotoB;
                         color: #ff7a01;
                         vertical-align: middle;
@@ -921,9 +921,9 @@ button[class^=btn_type]{
     }//prd_list_box
 }//wrapper_prd_list
 .prd_title{
-    padding-bottom: $px24;
-    margin-bottom: $px24;            
-    border-bottom: $px1 solid #c2c2c2;
+    padding-bottom: tablet(24);
+    margin-bottom: tablet(24);            
+    border-bottom: tablet(1) solid #c2c2c2;
     font-family: $robotoB,$notoB;
     overflow: hidden;
     > * {
@@ -932,14 +932,14 @@ button[class^=btn_type]{
     }
     .prd_fav_checkbox{
         float: left;
-        width: $px44;
-        height: $px44;
+        width: tablet(44);
+        height: tablet(44);
         appearance: none;
-        border: $px1 solid #c1c1c1;
+        border: tablet(1) solid #c1c1c1;
         background-image: check(c2c2c2);
         background-color: #fff;
         background-repeat: no-repeat;
-        background-size: $px24;
+        background-size: tablet(24);
         background-position: center;
 
         &:checked{
@@ -949,34 +949,34 @@ button[class^=btn_type]{
         }
         & ~ [class^=title_]{
             width: calc(100% - (44rem / 13.34));
-            padding-left: $px20;
+            padding-left: tablet(20);
         }
     }            
     .title_s{
         width: 100%;
-        font-size: $px14;
-        padding-bottom: $px6;
+        font-size: tablet(14);
+        padding-bottom: tablet(6);
     }//title_s
     .title_m{
         width: calc(100% - (90rem / 13.34));
-        font-size: $px24;
-        height: $px24;
+        font-size: tablet(24);
+        height: tablet(24);
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: break-all;
         span{
             color: #999;
-            margin-left: $px6;
+            margin-left: tablet(6);
         }
     }//title_m
     .prd_recommend{
-        width: $px90;
+        width: tablet(90);
         text-align: right;
         i{
-            width: $px40;
-            height: $px20;
+            width: tablet(40);
+            height: tablet(20);
             &+i{
-                margin-left: $px6;
+                margin-left: tablet(6);
             }
         }
         .icon_new{
@@ -993,7 +993,7 @@ button[class^=btn_type]{
 .wrapper_compare_buttons{
     display: none;
     position: fixed;
-    bottom: $px60;
+    bottom: tablet(60);
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 0;
@@ -1003,38 +1003,38 @@ button[class^=btn_type]{
     > *{
         display: inline-block;
         vertical-align: middle;
-        box-shadow: 0 $px5 $px10 0 rgba(0,0,0,.25);
+        box-shadow: 0 tablet(5) tablet(10) 0 rgba(0,0,0,.25);
     }
     .btn_go_compare{
-        width: $px200;
-        height: $px62;
-        line-height: $px62;
+        width: tablet(200);
+        height: tablet(62);
+        line-height: tablet(62);
         background-color: $skm_red;
         border-radius: 100rem;
         text-align: center;
         color: #fff;
         font-family: $robotoB,$notoB;
-        font-size: $px16;
-        margin-right: $px10;
+        font-size: tablet(16);
+        margin-right: tablet(10);
         i{
             display: inline-block;
-            width: $px8;
-            height: $px10;
+            width: tablet(8);
+            height: tablet(10);
             background-image: arrow(fff);
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;
             transform: rotate(180deg);
-            margin-left: $px6;
+            margin-left: tablet(6);
         }
     }
     .btn_close_compare{
-        width: $px62;
-        height: $px62;
+        width: tablet(62);
+        height: tablet(62);
         border-radius: 100%;
         background-image: close(fff);
         background-repeat: no-repeat;
-        background-size: $px14;
+        background-size: tablet(14);
         background-position: center;
         background-color: #222;
     }
@@ -1042,3 +1042,109 @@ button[class^=btn_type]{
 /* e : 비교하기 버튼 */
 
 // e : *********************** 엘리먼트 ***********************
+
+/* s : 마케팅 활용 동의 모바일 랜딩페이지 */
+.wrapper_marketing_agree{
+    padding: mobile(80) mobile(40) mobile(120);
+    .marketing_agree_title{
+        font-family: $robotoB,$notoB;
+        font-size: mobile(44);
+        line-height: mobile(66);
+        padding-bottom: mobile(40);
+        margin-bottom: mobile(40);
+        border-bottom: mobile(4) solid #222;
+    }
+    .marketing_agree_detail{
+        font-family: $robotoM,$notoM;
+        font-size: mobile(32);
+        line-height: mobile(46);
+        margin-bottom: mobile(40);
+    }
+    .marketing_agree_list{
+        background: #f8f8f8;
+        padding: mobile(40) mobile(30);
+        margin-bottom: mobile(30);
+        dl{
+            & + dl{
+                margin-top: mobile(40);
+            }
+            dt{
+                font-size: mobile(26);
+                font-family: $robotoB,$notoB;
+            }
+            dd{
+                font-size: mobile(28);
+                font-family: $robotoR,$notoR;
+                margin-top: mobile(20);
+                padding-left: mobile(16);
+            }
+        }
+    }
+    ul.marketing_agree_notice{
+        margin-bottom: mobile(60);
+        li{
+            padding-left: mobile(20);
+            font-family: $robotoR,$notoR;
+            font-size: mobile(26);
+            line-height: mobile(38);
+            color: #666;
+            position: relative;
+            letter-spacing: calc(-1 * (1rem / 7.5));
+            &:before{
+                position: absolute;
+                left: 0;
+                content: "\2022";
+            }
+        }
+    }
+    table.marketing_agree_info{
+        width: 100%;
+        border-top: mobile(2) solid #222;
+        font-family: $robotoB,$notoB;
+        font-size: mobile(26);
+        text-align: left;
+        margin-bottom: mobile(80);
+        tbody{
+            tr{
+                border-bottom: mobile(2) solid #c2c2c2;
+                th,td{
+                    padding: mobile(30);
+                }
+                th{
+                    background: #f8f8f8;
+                }
+            }
+        }
+    }
+    .marketing_agree_buttons{
+        font-size: 0;
+        margin-bottom: mobile(80);
+        button{
+            display: inline-block;
+            height: mobile(120);
+            border-radius: 100rem;
+            font-family: $robotoB,$notoB;
+            font-size: mobile(32);
+        }
+        .btn_agree{
+            width: calc(100% - (210rem / 7.5));
+            margin-right: mobile(10);
+            color: #fff;
+            background: $skm_red;
+            border: mobile(2) solid $skm_red;
+        }
+        .btn_disagree{
+            width: mobile(200);
+            color: #666;
+            background: #fff;
+            border: mobile(2) solid #666;
+        }
+    }
+    .marketing_agree_footer{
+        text-align: center;
+        font-family: $robotoB,$notoB;
+        font-size: mobile(32);
+        color: #999;
+    }
+}
+/* e : 마케팅 활용 동의 모바일 랜딩페이지 */
