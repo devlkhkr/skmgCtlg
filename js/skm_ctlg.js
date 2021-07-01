@@ -9,9 +9,24 @@ if(tabMenu.length > 0){
                     all.classList.remove("on") //전체 li on클래스 해제
                 })
                 this.classList.add("on") //클릭된 li on 클래스 추가
+                getTabIndex(this, ul);
             });
         });
     });
+}
+
+function getTabIndex(obj, area){
+    list = obj.parentNode.getElementsByTagName(obj.tagName);
+    for(i=0;i<list.length;i++){
+        if(list[i] === obj){
+            tabAlignCenter(i,list,area);
+        }
+    }
+}
+
+function tabAlignCenter(index,list,area){
+    scrollLeft = list[i].clientWidth * (index - 2);
+    area.scrollTo(scrollLeft,0)
 }
 // *********** e : 탭메뉴 클릭이벤트 공통 ***********
 
@@ -108,6 +123,7 @@ doSlide();
 
 // *********** s : 팝업 호출 및 닫기 ***********
 searchBar = document.getElementsByClassName("popup_search_bar")[0];
+layerSmall = document.getElementsByClassName("popup_layer_contents_small")[0];
 // s : 호출
 function layerCall(type){
     if(type == 0){ //제품 상세
@@ -124,7 +140,9 @@ function layerCall(type){
     else if(type == 1){//검색
         searchBar.classList.add("on");
     }
-
+    else if(type == 2){//마케팅 활용 수집 및 이용 동의
+        layerSmall.classList.add("on")
+    }
     layer.classList.add("on");
 }
 // e : 호출
@@ -133,7 +151,8 @@ function layerClose(node){
     node.parentNode.classList.remove("on");
     slider.classList.remove("on")
     searchBar.classList.remove("on");
-    layer.classList.remove("multi")
+    layerSmall.classList.remove("on")
+    layer.classList.remove("multi");
 }
 // e : 닫기
 // *********** e : 팝업 호출 및 닫기 ***********

@@ -193,20 +193,31 @@
           <div class="btn_categories_next" onclick="ctgrScroll(1)"></div>
         </div>
         <!-- e : 상품 카테고리-->
+        <!-- s : 즐겨찾기 및 검색 상태 바-->
+        <!-- s : 즐겨찾기-->
+        <div class="contents_top_states">
+          <div class="top_states_message"><span class="searchedFav">24</span>개의 즐겨찾기가 있습니다.</div>
+          <div class="top_states_buttons">
+            <button class="btn_type_01" type="button" onclick="layerCall(2)">상품전송</button>
+            <button class="btn_type_02" type="button">MC앱 상품담기</button>
+          </div>
+          <div class="btn_states_close" onclick="location.href='./01_skm_ctlg_main.html'"></div>
+        </div>
+        <!-- e : 즐겨찾기-->
         <!-- s : 컨텐츠 상세-->
         <div class="contents_detail">
           <!-- s : 메인 상품 리스트-->
           <div class="wrapper_prd_list">
-            <!-- s : 메인 상품 박스-->
+            <!-- s : 즐겨찾기 상품 박스-->
             <div class="prd_list_box" onclick="layerCall(0)">
               <div class="prd_title">
+                <input class="prd_fav_checkbox" type="checkbox" onclick="checkFavList(event)">
                 <div class="title_s">SK매직 스스로 직수 정수기</div>
                 <div class="title_m">WPU-A1100C<span>(V1.USP)</span></div>
-                <div class="prd_recommend"><i class="icon_new"></i><i class="icon_hit"> </i></div>
               </div>
               <div class="prd_detail">
                 <div class="prd_img"> <img src="../images/samples/prd_sample_01.png"></div>
-                <div class="prd_state"> 
+                <div class="prd_state">
                   <div class="icon_state_compare" onclick="onOffTrigger(event,this);compareCheck()"><i> </i><span>비교하기</span></div>
                   <div class="icon_state_fav" onclick="onOffTrigger(event,this)"><i> </i><span>즐겨찾기</span></div>
                 </div>
@@ -250,22 +261,23 @@
                       <li>1차 프리 블록 카본(4개월)</li>
                       <li>2차 복합 나노테크 팩(12개월)</li>
                       <li>3차 포스트 블록카본</li>
-                      <li>4차 복합 나노테크 팩(12개월)</li>
+                      <li>4차 복합 나노테크 팩(12개월)                                                </li>
                     </ul>
                   </dd>
                 </dl>
               </div>
             </div>
-            <!-- s : 메인 상품 박스-->
+            <!-- s : 즐겨찾기 상품 박스-->
+            <!-- s : 즐겨찾기 상품 박스-->
             <div class="prd_list_box" onclick="layerCall(0)">
               <div class="prd_title">
+                <input class="prd_fav_checkbox" type="checkbox" onclick="checkFavList(event)">
                 <div class="title_s">SK매직 스스로 직수 정수기</div>
                 <div class="title_m">WPU-A1100C<span>(V1.USP)</span></div>
-                <div class="prd_recommend"><i class="icon_new"></i><i class="icon_hit"> </i></div>
               </div>
               <div class="prd_detail">
                 <div class="prd_img"> <img src="../images/samples/prd_sample_01.png"></div>
-                <div class="prd_state"> 
+                <div class="prd_state">
                   <div class="icon_state_compare" onclick="onOffTrigger(event,this);compareCheck()"><i> </i><span>비교하기</span></div>
                   <div class="icon_state_fav" onclick="onOffTrigger(event,this)"><i> </i><span>즐겨찾기</span></div>
                 </div>
@@ -309,22 +321,23 @@
                       <li>1차 프리 블록 카본(4개월)</li>
                       <li>2차 복합 나노테크 팩(12개월)</li>
                       <li>3차 포스트 블록카본</li>
-                      <li>4차 복합 나노테크 팩(12개월)</li>
+                      <li>4차 복합 나노테크 팩(12개월)                                                </li>
                     </ul>
                   </dd>
                 </dl>
               </div>
             </div>
-            <!-- s : 메인 상품 박스-->
+            <!-- s : 즐겨찾기 상품 박스-->
+            <!-- s : 즐겨찾기 상품 박스-->
             <div class="prd_list_box" onclick="layerCall(0)">
               <div class="prd_title">
+                <input class="prd_fav_checkbox" type="checkbox" onclick="checkFavList(event)">
                 <div class="title_s">SK매직 스스로 직수 정수기</div>
                 <div class="title_m">WPU-A1100C<span>(V1.USP)</span></div>
-                <div class="prd_recommend"><i class="icon_new"></i><i class="icon_hit"> </i></div>
               </div>
               <div class="prd_detail">
                 <div class="prd_img"> <img src="../images/samples/prd_sample_01.png"></div>
-                <div class="prd_state"> 
+                <div class="prd_state">
                   <div class="icon_state_compare" onclick="onOffTrigger(event,this);compareCheck()"><i> </i><span>비교하기</span></div>
                   <div class="icon_state_fav" onclick="onOffTrigger(event,this)"><i> </i><span>즐겨찾기</span></div>
                 </div>
@@ -368,22 +381,23 @@
                       <li>1차 프리 블록 카본(4개월)</li>
                       <li>2차 복합 나노테크 팩(12개월)</li>
                       <li>3차 포스트 블록카본</li>
-                      <li>4차 복합 나노테크 팩(12개월)</li>
+                      <li>4차 복합 나노테크 팩(12개월)                                                </li>
                     </ul>
                   </dd>
                 </dl>
               </div>
             </div>
-            <!-- s : 메인 상품 박스-->
+            <!-- s : 즐겨찾기 상품 박스-->
+            <!-- s : 즐겨찾기 상품 박스-->
             <div class="prd_list_box" onclick="layerCall(0)">
               <div class="prd_title">
+                <input class="prd_fav_checkbox" type="checkbox" onclick="checkFavList(event)">
                 <div class="title_s">SK매직 스스로 직수 정수기</div>
                 <div class="title_m">WPU-A1100C<span>(V1.USP)</span></div>
-                <div class="prd_recommend"><i class="icon_new"></i><i class="icon_hit"> </i></div>
               </div>
               <div class="prd_detail">
                 <div class="prd_img"> <img src="../images/samples/prd_sample_01.png"></div>
-                <div class="prd_state"> 
+                <div class="prd_state">
                   <div class="icon_state_compare" onclick="onOffTrigger(event,this);compareCheck()"><i> </i><span>비교하기</span></div>
                   <div class="icon_state_fav" onclick="onOffTrigger(event,this)"><i> </i><span>즐겨찾기</span></div>
                 </div>
@@ -427,12 +441,13 @@
                       <li>1차 프리 블록 카본(4개월)</li>
                       <li>2차 복합 나노테크 팩(12개월)</li>
                       <li>3차 포스트 블록카본</li>
-                      <li>4차 복합 나노테크 팩(12개월)</li>
+                      <li>4차 복합 나노테크 팩(12개월)                                                </li>
                     </ul>
                   </dd>
                 </dl>
               </div>
             </div>
+            <!-- s : 즐겨찾기 상품 박스-->
             <!-- s : 비교하기 버튼-->
             <div class="wrapper_compare_buttons">
               <div class="btn_go_compare" onclick="layerCall(0)">비교하기 <span>count</span><i></i></div>

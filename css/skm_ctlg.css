@@ -82,20 +82,14 @@ html {
   width: calc(40rem / 13.34);
   height: calc(40rem / 13.34);
   background: #fff;
-  border: calc(2rem / 13.34) solid #666;
+  border: calc(2rem / 13.34) solid #999;
   border-radius: 100%;
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
-}
-
-#navTrigger::before {
-  position: absolute;
-  content: "<";
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #666;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21.74" height="45.345" viewBox="0 0 21.74 45.345"><path id="화살표" d="M0,0,18.75,20.625,20,22,0,44" transform="translate(21 44.673) rotate(180)" fill="none" stroke="%23222" stroke-linejoin="round" stroke-width="2"/></svg>');
+  background-repeat: no-repeat;
+  background-size: calc(6rem / 13.34);
+  background-position: center;
 }
 
 #navTrigger:checked {
@@ -554,7 +548,7 @@ button[class^=btn_type] {
 
 /* e : 로그인 */
 /* s : 상품 레이어 팝업 */
-.layer_mask, .popup_layer_contents {
+.layer_mask, .popup_layer_contents, .popup_layer_contents_small {
   display: inline-block;
   position: fixed;
 }
@@ -631,11 +625,19 @@ button[class^=btn_type] {
 }
 
 .popup_layer_contents {
+  width: calc(100% - (200rem / 13.34));
+  height: calc(100% - (200rem / 13.34));
+}
+
+.popup_layer_contents_small {
+  width: calc(700rem / 13.34);
+  height: calc(320rem / 13.34);
+}
+
+.popup_layer_contents, .popup_layer_contents_small {
   display: none;
   left: 50%;
   top: 50%;
-  width: calc(100% - (200rem / 13.34));
-  height: calc(100% - (200rem / 13.34));
   padding-top: calc(50rem / 13.34);
   background-color: #fff;
   -webkit-transform: translate(-50%, -50%);
@@ -645,11 +647,11 @@ button[class^=btn_type] {
   overflow: hidden;
 }
 
-.popup_layer_contents.on {
+.popup_layer_contents.on, .popup_layer_contents_small.on {
   display: block;
 }
 
-.popup_layer_contents .btn_layer_close {
+.popup_layer_contents .btn_layer_close, .popup_layer_contents_small .btn_layer_close {
   position: absolute;
   right: 0;
   top: 0;
@@ -663,7 +665,7 @@ button[class^=btn_type] {
   z-index: 1;
 }
 
-.popup_layer_contents .slide_handler {
+.popup_layer_contents .slide_handler, .popup_layer_contents_small .slide_handler {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -673,7 +675,7 @@ button[class^=btn_type] {
           transition-duration: .3s;
 }
 
-.popup_layer_contents .layer_page {
+.popup_layer_contents .layer_page, .popup_layer_contents_small .layer_page {
   display: inline-block;
   width: 100%;
   height: calc(100% - (50rem / 13.34));
@@ -757,6 +759,69 @@ button[class^=btn_type] {
 }
 
 /* e : 검색 레이어 팝업 */
+/* s : 마케팅 동의 레이어 팝업 */
+/* e : 마케팅 동의 레이어 팝업 */
+.wrapper_mkt {
+  text-align: left;
+  padding: 0 calc(54rem / 13.34);
+}
+
+.wrapper_mkt .mkt_title {
+  font-family: "robotoBold", "notoSansBold";
+  font-size: calc(28rem / 13.34);
+  border-bottom: calc(2rem / 13.34) solid #222;
+  padding-bottom: calc(20rem / 13.34);
+  margin-bottom: calc(20rem / 13.34);
+}
+
+.wrapper_mkt .mkt_detail {
+  font-family: "robotoRegular", "notoSansRegular";
+  font-size: calc(18rem / 13.34);
+  color: #444;
+}
+
+.wrapper_mkt .mkt_info {
+  margin-top: calc(46rem / 13.34);
+}
+
+.wrapper_mkt .mkt_info .info_title {
+  font-family: "robotoMedium", "notoSansMedium";
+  font-size: calc(18rem / 13.34);
+  margin-bottom: calc(9rem / 13.34);
+}
+
+.wrapper_mkt .mkt_info .info_call {
+  font-size: 0;
+}
+
+.wrapper_mkt .mkt_info .info_call > * {
+  display: inline-block;
+  height: calc(56rem / 13.34);
+}
+
+.wrapper_mkt .mkt_info .info_call input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: calc(100% - (150rem / 13.34));
+  margin-right: calc(10rem / 13.34);
+  padding: 0 calc(20rem / 13.34);
+  font-family: "robotoRegular", "notoSansRegular";
+  font-size: calc(20rem / 13.34);
+  border: calc(1rem / 13.34) solid #c2c2c2;
+  color: #222;
+}
+
+.wrapper_mkt .mkt_info .info_call button {
+  width: calc(140rem / 13.34);
+  font-family: "robotoBold", "notoSansBold";
+  font-size: calc(18rem / 13.34);
+  color: #fff;
+  background: #e3163a;
+  border-radius: 100rem;
+  border: 0;
+}
+
 /* s : 비교하기 테이블 */
 .wrapper_compare_table {
   padding: 0 calc(50rem / 13.34) calc(50rem / 13.34);
@@ -1067,6 +1132,7 @@ button[class^=btn_type] {
 }
 
 /* e : 메인 상품 리스트 */
+/* s : 비교하기 버튼 */
 .wrapper_compare_buttons {
   display: none;
   position: fixed;
@@ -1101,6 +1167,19 @@ button[class^=btn_type] {
   margin-right: calc(10rem / 13.34);
 }
 
+.wrapper_compare_buttons .btn_go_compare i {
+  display: inline-block;
+  width: calc(8rem / 13.34);
+  height: calc(10rem / 13.34);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21.74" height="45.345" viewBox="0 0 21.74 45.345"><path id="화살표" d="M0,0,18.75,20.625,20,22,0,44" transform="translate(21 44.673) rotate(180)" fill="none" stroke="%23fff" stroke-linejoin="round" stroke-width="2"/></svg>');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: calc(6rem / 13.34);
+}
+
 .wrapper_compare_buttons .btn_close_compare {
   width: calc(62rem / 13.34);
   height: calc(62rem / 13.34);
@@ -1111,4 +1190,6 @@ button[class^=btn_type] {
   background-position: center;
   background-color: #222;
 }
+
+/* e : 비교하기 버튼 */
 /*# sourceMappingURL=skm_ctlg.css.map */

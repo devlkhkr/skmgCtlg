@@ -104,8 +104,28 @@
   <div class="popup_search_bar">
     <div class="btn_close_search" onclick="layerClose(this.parentNode)"></div>
     <input class="input_search" type="text" placeholder="검색어를 입력해 주세요."/>
-    <div class="btn_do_search">               </div>
+    <div class="btn_do_search" onclick="location.href='./03_skm_ctlg_searched.html'"></div>
   </div>
   <!-- e : 검색 레이어-->
+  <!-- s : 마케팅 활용 수집 및 이용 동의-->
+  <div class="popup_layer_contents_small">
+    <div class="btn_layer_close" onclick="layerClose(this.parentNode)"></div>
+    <div class="slide_handler">
+      <div class="layer_page">
+        <div class="wrapper_mkt">
+          <div class="mkt_title">마케팅 활용을 수집 및 이용 동의</div>
+          <div class="mkt_detail">고객님의 핸드폰으로 마케팅 동의 문자가 발송됩니다.</div>
+          <div class="mkt_info">
+            <div class="info_title">휴대전화 번호</div>
+            <div class="info_call"> 
+              <input type="number" placeholder="휴대전화 번호를 입력하세요."/>
+              <button>전송</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e : 마케팅 활용 수집 및 이용 동의-->
 </div>
 <!-- e : 레이어 팝업-->

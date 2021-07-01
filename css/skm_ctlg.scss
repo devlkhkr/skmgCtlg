@@ -104,17 +104,13 @@ html{
     width: $px40;
     height: $px40;
     background: #fff;
-    border: $px2 solid #666;
+    border: $px2 solid #999;
     border-radius: 100%;
     transition-duration: .3s;
-    &::before{
-        position: absolute;
-        content: "<";
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        color: #666;
-    }
+    background-image: arrow(222);
+    background-repeat: no-repeat;
+    background-size: $px6;
+    background-position: center;
     &:checked{
         transform: rotate(180deg);
     }
@@ -498,7 +494,7 @@ button[class^=btn_type]{
 /* e : 로그인 */
 
 /* s : 상품 레이어 팝업 */
-.layer_mask,.popup_layer_contents{
+.layer_mask,.popup_layer_contents,.popup_layer_contents_small{
     display: inline-block;
     position: fixed;
 }
@@ -563,13 +559,18 @@ button[class^=btn_type]{
         }
     }    
 }
-
 .popup_layer_contents{
+    width: calc(100% - (200rem / 13.34));
+    height: calc(100% - (200rem / 13.34));
+}
+.popup_layer_contents_small{
+    width: $px700;
+    height: $px320;
+}
+.popup_layer_contents,.popup_layer_contents_small{
     display: none;
     left: 50%;
     top: 50%;
-    width: calc(100% - (200rem / 13.34));
-    height: calc(100% - (200rem / 13.34));
     padding-top: $px50;
     background-color: #fff;
     transform: translate(-50%,-50%);
@@ -663,6 +664,59 @@ button[class^=btn_type]{
 }
 /* e : 검색 레이어 팝업 */
 
+/* s : 마케팅 동의 레이어 팝업 */
+
+/* e : 마케팅 동의 레이어 팝업 */
+.wrapper_mkt{
+    text-align: left;
+    padding: 0 $px54;
+    .mkt_title{
+        font-family: $robotoB,$notoB;
+        font-size: $px28;
+        border-bottom: $px2 solid #222;
+        padding-bottom: $px20;
+        margin-bottom: $px20;
+    }
+    .mkt_detail{
+        font-family: $robotoR,$notoR;
+        font-size: $px18;
+        color: #444;
+    }
+    .mkt_info{
+        margin-top: $px46;
+        .info_title{
+            font-family: $robotoM,$notoM;
+            font-size: $px18;
+            margin-bottom: $px9;
+        }
+        .info_call{
+            font-size: 0;
+            > *{
+                display: inline-block;
+                height: $px56;
+            }
+            input{
+                appearance: none;
+                width: calc(100% - (150rem / 13.34));
+                margin-right: $px10;
+                padding: 0 $px20;
+                font-family: $robotoR,$notoR;
+                font-size: $px20;
+                border: $px1 solid #c2c2c2;
+                color: #222;
+            }
+            button{
+                width: $px140;
+                font-family: $robotoB,$notoB;
+                font-size: $px18;
+                color: #fff;
+                background: $skm_red;
+                border-radius: 100rem;
+                border: 0;
+            }
+        }
+    }
+}
 /* s : 비교하기 테이블 */
 .wrapper_compare_table{
     padding: 0 $px50 $px50;
@@ -934,6 +988,7 @@ button[class^=btn_type]{
 }//prd_title
 /* e : 메인 상품 리스트 */
 
+/* s : 비교하기 버튼 */
 .wrapper_compare_buttons{
     display: none;
     position: fixed;
@@ -960,6 +1015,17 @@ button[class^=btn_type]{
         font-family: $robotoB,$notoB;
         font-size: $px16;
         margin-right: $px10;
+        i{
+            display: inline-block;
+            width: $px8;
+            height: $px10;
+            background-image: arrow(fff);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(180deg);
+            margin-left: $px6;
+        }
     }
     .btn_close_compare{
         width: $px62;
@@ -972,5 +1038,6 @@ button[class^=btn_type]{
         background-color: #222;
     }
 }
+/* e : 비교하기 버튼 */
 
 // e : *********************** 엘리먼트 ***********************

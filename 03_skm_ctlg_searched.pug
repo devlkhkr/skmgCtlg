@@ -1,0 +1,125 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title skmagic
+        link(rel="stylesheet" type="text/css" href="../css/skm_ctlg.css")
+        script(type="text/javascript" src="../js/skm_ctlg.js" defer)
+    body
+        include ./skm_ctlg_layerPopup
+        // s : 컨테이너
+        .wrapper_skm_ctlg 
+            input(type="checkbox" onclick="fullScreen(this)")#navTrigger
+            // s : 헤더
+            .ctlg_top_header 
+                .ctlg_header_menus 
+                    dl(onclick="layerCall(1)") 
+                        dt.icon_search 
+                        dd 검색
+                    dl(onclick="location.href='./02_skm_ctlg_fav.html'")
+                        dt.icon_fav
+                            span 25
+                        dd 즐겨찾기
+                    dl 
+                        dt.icon_logout 
+                        dd 로그아웃
+            // e : 헤더
+            // s : 좌측 네비게이션
+            .ctlg_left_nav 
+                h1.skm_ctlg_logo(onclick="location.href='./01_skm_ctlg_main.html'")
+                ul
+                    li 제휴렌탈
+                    li 프로모션
+                    li 제휴할인
+                    li 자동이체 할인
+            // e : 좌측 네비게이션
+            // s : 본문 영역
+            .ctlg_right_contents 
+                // s : 상품 카테고리
+                .contents_top_nav
+                    .btn_categories_prev(onclick="ctgrScroll(0)")
+                    ul.nav_categories.tabMenu 
+                        li.on 정수기 <span>(30)</span>
+                        li 공기청정기 <span>(20)</span>
+                        li 비데 <span>(20)</span>
+                        li 식기세척기 <span>(20)</span>
+                        li 인덕션 <span>(20)</span>
+                        li 메뉴 <span>(0)</span>
+                        li 메뉴 <span>(0)</span>
+                        li 메뉴 <span>(0)</span>
+                        li 메뉴 <span>(0)</span>
+                        li 메뉴 <span>(0)</span>
+                        li 메뉴 <span>(0)</span>
+                        li 메뉴 <span>(0)</span>
+                    .btn_categories_next(onclick="ctgrScroll(1)")
+                // e : 상품 카테고리
+                
+                // s : 즐겨찾기 및 검색 상태 바
+                // s : 검색결과
+                .contents_top_states
+                    .top_states_message <span class="searchedKeyword">WPU</span>에 대한<span class="countSearched">85</span>개의 통합 검색결과입니다.
+                    .btn_states_close(onclick="location.href='./01_skm_ctlg_main.html'")
+                // e : 검색결과
+                // e : 즐겨찾기 및 검색 상태 바
+
+                // s : 컨텐츠 상세
+                .contents_detail
+                    // s : 메인 상품 리스트
+                    .wrapper_prd_list
+                        -for(var i=0;i<4;i++)
+                            // s : 메인 상품 박스
+                            .prd_list_box(onclick="layerCall(0)")
+                                .prd_title
+                                    .title_s SK매직 스스로 직수 정수기
+                                    .title_m WPU-A1100C<span>(V1.USP)</span>
+                                    .prd_recommend
+                                        i.icon_new
+                                        i.icon_hit 
+                                .prd_detail
+                                    .prd_img 
+                                        img(src="../images/samples/prd_sample_01.png")
+                                    .prd_state 
+                                        .icon_state_fav(onclick="onOffTrigger(event,this)")
+                                            i 
+                                            span 즐겨찾기
+                                .prd_info 
+                                    dl.prd_price
+                                        dt 렌탈료
+                                        dd 27,900
+                                    dl
+                                        dt 크기
+                                        dd
+                                            ul
+                                                li W165 X D525 X H405mm
+                                    dl
+                                        dt 용량
+                                        dd 
+                                            ul
+                                                li 냉수 4.8L / 온수 4.8L
+                                    dl
+                                        dt 기능
+                                        dd 
+                                            ul
+                                                li 코크 UV 살균 / 월터룸 UV 살균
+                                                li 고온수기능(최고 95℃)
+                                                li 냉수 연속취수
+                                                li RO필터 
+                                    dl 
+                                        dt 정수방식
+                                        dd 
+                                            ul
+                                                li 1차 프리 블록 카본(4개월)
+                                                li 2차 복합 나노테크 팩(12개월)
+                                                li 3차 포스트 블록카본
+                                                li 4차 복합 나노테크 팩(12개월)
+                        // s : 비교하기 버튼
+                        .wrapper_compare_buttons
+                            .btn_go_compare(onclick="layerCall(0)") 비교하기 <span>count</span><i></i>
+                            .btn_close_compare(onclick="layerClose(this)")
+                        // e : 비교하기 버튼
+                    // e : 메인 상품 리스트
+                // e : 컨텐츠 상세
+            // e : 본문 영역
+        // e : 컨테이너

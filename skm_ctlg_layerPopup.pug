@@ -74,16 +74,30 @@
                                         li 안심출수라이팅
                                         li 3단계온수온도 조절
                                         li err등급 1등급                                                                                
-                                
             .layer_page 2
             .layer_page 3
             .layer_page 4
-                            
     // e : 상품 레이어
+
     // s : 검색 레이어
     .popup_search_bar
         .btn_close_search(onclick="layerClose(this.parentNode)")
         input(type="text" placeholder="검색어를 입력해 주세요.").input_search
-        .btn_do_search                
+        .btn_do_search(onclick="location.href='./03_skm_ctlg_searched.html'")
     // e : 검색 레이어
+
+    // s : 마케팅 활용 수집 및 이용 동의
+    .popup_layer_contents_small
+        .btn_layer_close(onclick="layerClose(this.parentNode)")
+        .slide_handler
+            .layer_page
+                .wrapper_mkt
+                    .mkt_title 마케팅 활용을 수집 및 이용 동의
+                    .mkt_detail 고객님의 핸드폰으로 마케팅 동의 문자가 발송됩니다.
+                    .mkt_info
+                        .info_title 휴대전화 번호
+                        .info_call 
+                            input(type="number" placeholder="휴대전화 번호를 입력하세요.")
+                            button 전송
+    // e : 마케팅 활용 수집 및 이용 동의
 // e : 레이어 팝업
