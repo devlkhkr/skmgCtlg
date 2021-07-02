@@ -940,7 +940,9 @@ button[class^=btn_type]{
         background-repeat: no-repeat;
         background-size: tablet(24);
         background-position: center;
-
+        &:focus{
+            outline: 0;
+        }
         &:checked{
             background-image: check(fff);
             background-color: #222;
