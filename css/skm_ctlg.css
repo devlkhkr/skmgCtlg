@@ -1198,6 +1198,12 @@ button[class^=btn_type] {
 /* e : 비교하기 버튼 */
 /* s : 마케팅 활용 동의 모바일 랜딩페이지 */
 .wrapper_marketing_agree {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: auto;
   padding: calc(80rem / 7.5) calc(40rem / 7.5) calc(120rem / 7.5);
 }
 
