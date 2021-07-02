@@ -90,13 +90,11 @@ html {
   background-repeat: no-repeat;
   background-size: calc(6rem / 13.34);
   background-position: center;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 #navTrigger:checked {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 body.navoff .ctlg_top_header {
