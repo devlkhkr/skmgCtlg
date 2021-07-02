@@ -1,5 +1,7 @@
 // *********** s : 탭메뉴 클릭이벤트 공통 ***********
 tabMenu = document.getElementsByClassName("tabMenu");
+prdArea = document.getElementsByClassName("contents_detail")[0];
+
 if(tabMenu.length > 0){
     [].forEach.call(tabMenu, function(ul) {
         tabList = ul.getElementsByTagName("li");
@@ -27,7 +29,11 @@ function getTabIndex(obj, area){
 function tabAlignCenter(index,list,area){
     scrollLeft = list[i].clientWidth * (index - 2);
     area.scrollTo(scrollLeft,0)
+    prdArea.scrollTo(0,0);
 }
+
+
+
 // *********** e : 탭메뉴 클릭이벤트 공통 ***********
 
 // *********** s : 제품 카테고리 버튼시 좌우 크롤이벤트 ***********
