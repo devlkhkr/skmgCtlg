@@ -562,10 +562,6 @@ button[class^=btn_type] {
   z-index: 998;
 }
 
-.test {
-  height: 3000px;
-}
-
 .btn_layer_prev, .btn_layer_next {
   width: calc(100rem / 13.34);
   height: 100%;
@@ -638,7 +634,6 @@ button[class^=btn_type] {
   display: none;
   left: 50%;
   top: 50%;
-  padding-top: calc(50rem / 13.34);
   background-color: #fff;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -678,11 +673,39 @@ button[class^=btn_type] {
 .popup_layer_contents .layer_page, .popup_layer_contents_small .layer_page {
   display: inline-block;
   width: 100%;
-  height: calc(100% - (50rem / 13.34));
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   font-size: calc(30rem / 13.34);
   text-align: center;
+}
+
+.table_prod_sample {
+  font-size: calc(20rem / 13.34);
+  width: 100%;
+}
+
+.wrapper_prod_detail {
+  display: table;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.wrapper_prod_detail table {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 0;
+}
+
+.wrapper_prod_detail table * {
+  vertical-align: bottom;
+}
+
+.wrapper_prod_detail table img {
+  width: 100%;
 }
 
 /* e : 상품 레이어 팝업 */
@@ -824,7 +847,7 @@ button[class^=btn_type] {
 
 /* s : 비교하기 테이블 */
 .wrapper_compare_table {
-  padding: 0 calc(50rem / 13.34) calc(50rem / 13.34);
+  padding: calc(50rem / 13.34);
 }
 
 .wrapper_compare_table table {
